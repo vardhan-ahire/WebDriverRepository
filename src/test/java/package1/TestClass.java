@@ -31,6 +31,7 @@ public class TestClass {
 		driver.findElement(By.name("email")).sendKeys("pieter.parker2020@gmail.com");
 		driver.findElement(By.name("pass")).sendKeys("Spiderman1!");
 		driver.findElement(By.name("login")).click();
+		System.out.println("Clicking on the login button");
 	}
 	@AfterTest
 	public void tearDown() throws Exception
