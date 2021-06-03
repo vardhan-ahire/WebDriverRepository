@@ -21,6 +21,7 @@ public class TestClass {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		System.out.println("Webdriver initialized");
 		
 	}
 	@Test
