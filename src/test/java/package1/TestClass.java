@@ -1,5 +1,6 @@
 package package1;
 
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -20,7 +21,7 @@ public class TestClass {
 	{
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		System.out.println("Webdriver initialized");
 		
 	}
@@ -31,7 +32,7 @@ public class TestClass {
 		driver.manage().window().maximize();
 		driver.findElement(By.name("email")).sendKeys("pieter.parker2020@gmail.com");
 		driver.findElement(By.name("pass")).sendKeys("Spiderman1!");
-		driver.findElement(By.name("login")).click();
+		driver.findElement(By.xpath("//span[text()='Log in']")).click();
 		System.out.println("Clicking on the login button");
 	}
 	@AfterTest
